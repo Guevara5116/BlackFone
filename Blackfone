@@ -95,14 +95,14 @@ html_code_updated = """
   <section class="services">
     <div class="service">📱 Cambio de pantalla</div>
     <div class="service">🔋 Cambio de batería</div>
-    <div class="service">💻 Reparación de placa</div>
+    <div class="service">💻 Reparación de celulares</div>
     <div class="service">🆓 Diagnóstico sin cargo</div>
   </section>
 
   <footer>
     📍 Córdoba, Argentina<br>
-    🕒 Lunes a Sábados - 10 a 18 hs<br>
-    📱 Seguinos en Instagram: @blackfone
+    🕒 Lunes a Sábados - 10 a 21 hs<br>
+    📱 Seguinos en Instagram: @blackfone.cba
   </footer>
 
   <a class="whatsapp-float" href="https://wa.me/543517676332" target="_blank">💬</a>
