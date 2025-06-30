@@ -1,0 +1,122 @@
+# Actualizar el archivo HTML con colores azul oscuro y estilo más parecido a una marca tech como BlackFone
+html_code_updated = """
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BlackFone</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0a0f2c;
+      color: #f1f1f1;
+    }
+    header {
+      text-align: center;
+      padding: 60px 20px 20px;
+    }
+    h1 {
+      color: #00b4d8;
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-weight: normal;
+      font-size: 1.2em;
+      color: #ccc;
+    }
+    .btn-whatsapp {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #00b4d8;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 20px;
+    }
+    .service {
+      background-color: #121d4a;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      text-align: center;
+      border: 1px solid #2c3e70;
+    }
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background-color: #081024;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      font-size: 30px;
+      line-height: 60px;
+      z-index: 999;
+      text-decoration: none;
+    }
+    .apple-icon {
+      font-size: 40px;
+      color: #f1f1f1;
+      margin-bottom: 10px;
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+    <div class="apple-icon"><i class="fab fa-apple"></i></div>
+    <h1>BlackFone</h1>
+    <h2>Servicio técnico confiable al mejor precio</h2>
+    <a class="btn-whatsapp" href="https://wa.me/543517676332" target="_blank">Cotizá por WhatsApp</a>
+  </header>
+
+  <section class="services">
+    <div class="service">📱 Cambio de pantalla</div>
+    <div class="service">🔋 Cambio de batería</div>
+    <div class="service">💻 Reparación de placa</div>
+    <div class="service">🆓 Diagnóstico sin cargo</div>
+  </section>
+
+  <footer>
+    📍 Córdoba, Argentina<br>
+    🕒 Lunes a Sábados - 10 a 18 hs<br>
+    📱 Seguinos en Instagram: @blackfone
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/543517676332" target="_blank">💬</a>
+
+</body>
+</html>
+"""
+
+# Guardar el nuevo archivo HTML
+html_file.write_text(html_code_updated, encoding="utf-8")
+
+# Crear nuevo ZIP actualizado
+zip_updated_path = Path("/mnt/data/blackfone_web_azul.zip")
+with ZipFile(zip_updated_path, 'w') as zipf:
+    zipf.write(html_file, arcname="index.html")
+
+zip_updated_path
